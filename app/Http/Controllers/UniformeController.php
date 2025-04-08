@@ -28,7 +28,7 @@ class UniformeController extends Controller
             'descripcion' => 'required|string',
             'categoria' => 'required|in:Industriales,Médicos,Escolares,Corporativos',
             'tipo' => 'required|string|max:255',
-            'fotos.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5120',
+            'fotos.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240',
         ]);
 
         $uniforme = Uniforme::create($validatedData);
